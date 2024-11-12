@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simple Authentication Pagination (Front-End Only)
 
-## Getting Started
+This repository presents a minimalist yet user-friendly authentication interface built with **[Next.js 15](https://nextjs.org/ "NextJS")**, **[TypeScript](https://www.typescriptlang.org/docs/ "TypeScript")**, **[TailwindCSS](https://tailwindcss.com/ "TailwindCSS")**, and **[Shadcn UI](https://ui.shadcn.com/ "Shadcn UI")** components.
 
-First, run the development server:
+The project consists of four primary pages:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Welcome Page
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Welcome Page** presents users with two options: creating a new account or signing in to an existing one. These options are accessible through dedicated buttons.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![1731432662383](image/README/1731432662383.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Sign-Up Page
 
-## Learn More
+The **Sign-Up Page** presents a streamlined registration process within a minimalist card component. Users are prompted to input their first name, last name, desired username, email, and password. For those who prefer to sign in to an existing account, a sign-in button is available, which transitions to a warning **Red-600** background when hovered. Additionally, a return home link is provided for users who wish to navigate back to the main page.
 
-To learn more about Next.js, take a look at the following resources:
+![1731432904995](image/README/1731432904995.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Sign-In Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The **Sign-In Page** employs a similar design to the **Sign-Up Page**, utilizing the same card and button components, including the back buttons. To sign in, users are required to input their username or email address, along with their password.
 
-## Deploy on Vercel
+![1731433160185](image/README/1731433160185.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Thank You Page
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The **Thank You Page** is a confirmation page displayed after successful registration or sign-in. A return button allows users to navigate back to the **Welcome Page**.
+
+![1731433330255](image/README/1731433330255.png)
