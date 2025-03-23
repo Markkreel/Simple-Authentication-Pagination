@@ -2,6 +2,25 @@
 
 This repository presents a minimalist yet user-friendly authentication interface built with **[Next.js 15](https://nextjs.org/ "NextJS")**, **[TypeScript](https://www.typescriptlang.org/docs/ "TypeScript")**, **[TailwindCSS](https://tailwindcss.com/ "TailwindCSS")**, and **[Shadcn UI](https://ui.shadcn.com/ "Shadcn UI")** components.
 
+## Authentication System
+
+The application features a secure authentication system with Sign-Up and Sign-In functionalities:
+
+### Sign-Up
+
+- Creates a new user account with validated credentials
+- Automatically stores user data in a local SQLite database (`users.db`)
+- Implements form validation to ensure data integrity
+- Database is created automatically on first user registration
+
+### Sign-In
+
+- Authenticates users against stored credentials in `users.db`
+- Features comprehensive form validation
+- Requires prior account creation through the Sign-Up process
+
+> **Note:** The application uses a local database system, meaning all user data is stored locally on your machine.
+
 The project consists of four primary pages:
 
 ### Welcome Page
