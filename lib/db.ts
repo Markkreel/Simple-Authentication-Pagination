@@ -17,6 +17,10 @@ class DatabaseManager {
 
   private constructor() {}
 
+  public isConnected(): boolean {
+    return this.db !== null;
+  }
+
   public static getInstance(): DatabaseManager {
     if (!DatabaseManager.instance) {
       DatabaseManager.instance = new DatabaseManager();
