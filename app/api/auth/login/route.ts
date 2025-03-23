@@ -1,13 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { initializeDatabase } from "@/lib/init-db";
 
 export async function POST(req: NextRequest) {
   try {
+    // Initialize database connection
+    await initializeDatabase();
     const body = await req.json();
     const { email, password } = body;
 
-    // Connect to database
-    await db.connect();
+    // Ensure database is connected
+    if (!db.isConnected()) {
+      throw new Error('Database not connected');
+    }
 
     // Verify user credentials
     const user = await db.verifyUser(email, password);
