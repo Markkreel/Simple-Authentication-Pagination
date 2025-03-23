@@ -58,3 +58,5 @@ The **Thank You Page** is a confirmation page displayed after successful registr
 ![1742722708139](image/README/1742722708139.png)
 
 ![1742722740416](image/README/1742722740416.png)
+
+**Last Updated:** 24-04-2025 ⸺ **Last Reviewed:** 24-04-2025
