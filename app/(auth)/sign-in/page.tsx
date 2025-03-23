@@ -98,16 +98,6 @@ export default function SignIn() {
               </form>
             </Form>
           </CardContent>
-          <CardFooter className="flex justify-center">
-            <Button
-              asChild
-              variant={"outline"}
-              size={"lg"}
-              className="hover:bg-red-600 hover:text-white min-w-[120px]"
-            >
-              <Link href="/sign-up">Sign Up</Link>
-            </Button>
-          </CardFooter>
         </Card>
         <div>
           <Button variant={"link"} size={"lg"}>
