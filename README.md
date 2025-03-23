@@ -49,11 +49,11 @@ The **Thank You Page** is a confirmation page displayed after successful registr
 
 ### Form Validation
 
-#### Sign-Up
+#### Sign-Up Form
 
 ![1742722680221](image/README/1742722680221.png)
 
-#### Sign-In
+#### Sign-In Form
 
 ![1742722708139](image/README/1742722708139.png)
 
