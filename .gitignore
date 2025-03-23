@@ -38,3 +38,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# additional exclusions
+/.idea
+/.vscode
+/.cache
+/dist
+/temp
+/logs
+*.log
+*.tmp
+*.bak
+*.swp
