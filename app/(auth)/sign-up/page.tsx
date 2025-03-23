@@ -23,6 +23,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useRouter } from "next/navigation";
 
 const formSchema = z
   .object({
@@ -45,6 +46,7 @@ const formSchema = z
   });
 
 export default function SignUp() {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -59,6 +61,7 @@ export default function SignUp() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    router.push("/welcome");
   }
 
   return (
@@ -169,16 +172,6 @@ export default function SignUp() {
               </form>
             </Form>
           </CardContent>
-          <CardFooter className="flex justify-center">
-            <Button
-              asChild
-              variant={"outline"}
-              size={"lg"}
-              className="hover:bg-red-600 hover:text-white min-w-[120px]"
-            >
-              <Link href="/sign-in">Sign In</Link>
-            </Button>
-          </CardFooter>
         </Card>
         <div>
           <Button variant={"link"} size={"lg"}>
