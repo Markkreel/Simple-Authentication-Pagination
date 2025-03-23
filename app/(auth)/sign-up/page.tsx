@@ -59,9 +59,32 @@ export default function SignUp() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    router.push("/welcome");
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to register");
+      }
+
+      router.push("/welcome");
+    } catch (error) {
+      console.error("Registration error:", error);
+      // You might want to set an error state here to display to the user
+      if (error instanceof Error) {
+        form.setError("root", { message: error.message });
+      } else {
+        form.setError("root", { message: "An unexpected error occurred" });
+      }
+    }
   }
 
   return (
@@ -166,6 +189,7 @@ export default function SignUp() {
                     </FormItem>
                   )}
                 />
+                <FormMessage className="text-red-500" />
                 <Button type="submit" className="w-full hover:bg-green-600">
                   Sign Up
                 </Button>
