@@ -46,9 +46,31 @@ export default function SignIn() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    router.push("/welcome");
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to sign in");
+      }
+
+      router.push("/welcome");
+    } catch (error) {
+      console.error("Sign in error:", error);
+      if (error instanceof Error) {
+        form.setError("root", { message: error.message });
+      } else {
+        form.setError("root", { message: "An unexpected error occurred" });
+      }
+    }
   }
 
   return (
