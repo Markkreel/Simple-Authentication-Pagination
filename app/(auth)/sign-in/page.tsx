@@ -117,6 +117,11 @@ export default function SignIn() {
                     </FormItem>
                   )}
                 />
+                {form.formState.errors.root && (
+                  <FormMessage className="text-red-500">
+                    Email or password does not exist.
+                  </FormMessage>
+                )}
                 <Button type="submit" className="w-full hover:bg-green-600">
                   Sign In
                 </Button>
