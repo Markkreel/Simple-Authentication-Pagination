@@ -110,6 +110,20 @@ class DatabaseManager {
       throw error;
     }
   }
+
+  public async getCurrentUser(): Promise<User | null> {
+    if (!this.db) throw new Error('Database not connected');
+
+    try {
+      // For demonstration, we'll get the last logged-in user
+      // In a real application, this should use session management
+      const user = await this.db.get('SELECT * FROM users ORDER BY id DESC LIMIT 1');
+      return user || null;
+    } catch (error) {
+      console.error('Error getting current user:', error);
+      throw error;
+    }
+  }
 }
 
 export const db = DatabaseManager.getInstance();
