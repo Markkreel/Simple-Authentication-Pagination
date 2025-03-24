@@ -8,20 +8,24 @@ export default function Welcome() {
   const [lastName, setLastName] = useState<string>("");
 
   useEffect(() => {
-    const fetchUserData = async () => {
+    // Clear previous user data
+    setLastName("");
+
+    // Get current user data from localStorage
+    const currentUserStr = localStorage.getItem("currentUser");
+    if (currentUserStr) {
       try {
-        const response = await fetch("/api/auth/user");
-        const data = await response.json();
-
-        if (response.ok && data.user) {
-          setLastName(data.user.lastName);
-        }
+        const currentUser = JSON.parse(currentUserStr);
+        setLastName(currentUser.lastName || "");
       } catch (error) {
-        console.error("Error fetching user data:", error);
+        console.error("Error parsing user data:", error);
       }
-    };
+    }
 
-    fetchUserData();
+    // Cleanup function to clear user data when component unmounts
+    return () => {
+      setLastName("");
+    };
   }, []);
 
   return (
