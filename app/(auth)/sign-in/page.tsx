@@ -62,6 +62,11 @@ export default function SignIn() {
         throw new Error(data.error || "Failed to sign in");
       }
 
+      // Store user data in session
+      if (data.user) {
+        localStorage.setItem("currentUser", JSON.stringify(data.user));
+      }
+
       router.push("/welcome");
     } catch (error) {
       console.error("Sign in error:", error);
