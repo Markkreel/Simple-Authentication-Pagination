@@ -39,4 +39,14 @@ The **Sign-In Page** employs a similar design to the **Sign-Up Page**, utilizing
 
 The **Thank You Page** serves as a personalized confirmation page displayed after successful registration or sign-in. It features a welcome message that includes the user's last name, creating a more personalized experience. The page maintains user data persistence, ensuring that the welcome message remains consistent across sessions. A return button allows users to navigate back to the **Welcome Page**.
 
+## Gallery
+
+![1742840583600](image/README/1742840583600.png)
+
+![1742840450138](image/README/1742840450138.png)
+
+![1742840459688](image/README/1742840459688.png)
+
+![1742840469673](image/README/1742840469673.png)
+
 **Last Updated:** 25-04-2025 ⸺ **Last Reviewed:** 25-04-2025
