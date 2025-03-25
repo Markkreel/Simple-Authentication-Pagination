@@ -1,3 +1,9 @@
+/**
+ * Button Component
+ * A reusable button component with various styles and sizes.
+ * Supports different variants like default, destructive, outline, secondary, ghost, and link.
+ */
+
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
