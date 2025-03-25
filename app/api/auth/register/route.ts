@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
     // Ensure database is connected
     if (!db.isConnected()) {
-      throw new Error('Database not connected');
+      throw new Error("Database not connected");
     }
 
     // Create user
