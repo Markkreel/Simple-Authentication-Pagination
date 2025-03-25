@@ -1,3 +1,5 @@
+// This file configures TypeScript compiler options and module resolution settings.
+// It defines build settings, import aliases, and type checking rules for the project.
 {
   "compilerOptions": {
     "target": "ES2017",
