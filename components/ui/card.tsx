@@ -1,3 +1,9 @@
+/**
+ * Card Component
+ * A versatile card component with header, content, footer sections.
+ * Provides structured layout for displaying grouped content with consistent styling.
+ */
+
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
