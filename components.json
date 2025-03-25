@@ -1,3 +1,5 @@
+// This file configures shadcn/ui components and project aliases.
+// It defines the UI component library settings, styling preferences, and path aliases for better code organization.
 {
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "new-york",
